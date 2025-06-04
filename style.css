@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1,
+p,
+.mariam-pic {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeZoomIn 1.5s ease-in-out forwards;
+}
+
+h1 {
+  animation-delay: 0.5s;
+}
+
+p {
+  animation-delay: 1.5s;
+}
+
+.mariam-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+  animation-delay: 0.2s;
+}
+
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: red;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
+}
+
+@keyframes fadeZoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal-btn {
+  padding: 12px 25px;
+  background-color: #ff5c8d;
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 8px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  animation: fadeZoomIn 2s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+.reveal-btn:hover {
+  background-color: #e04874;
+}
+
+/* Hidden & Visible Letter */
+.hidden-letter {
+  display: none;
+}
+
+.visible-letter {
+  display: block;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #d63384;
+  border-radius: 12px;
+  font-size: 1.2em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: typeIn 4s steps(60, end);
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+/* Typing Effect */
+@keyframes typeIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

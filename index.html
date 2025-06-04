@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Mariam, With Love</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <img src="../kajooooooooooo/mariam.JPG" alt="Mariam's Picture" class="mariam-pic" />
+    <h1>Dear Mariam 💖</h1>
+    <p>
+      You are truly amazing. Every word you say, every smile you give,<br>
+      it lights up my world.<br><br>
+      I'm writing this just to say how much I love you.
+    </p>
+
+    <!-- Reveal Button -->
+    <button onclick="showLoveLetter()" class="reveal-btn">Click to Reveal My Love Letter 💌</button>
+
+    <!-- Hidden Love Letter -->
+    <div id="love-letter" class="hidden-letter">
+      <p>
+        My dearest Mariam,<br><br>
+        Every moment with you feels like magic. You are the poem in my silence,  
+        the peace in my chaos, and the light in my darkest days.<br><br>
+        I love you more than words could ever capture.<br><br>
+        Forever yours,<br>
+        <strong>💖 Your Secret Admirer 💖</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="heart"></div>
+
+  <script>
+    function showLoveLetter() {
+      const letter = document.getElementById("love-letter");
+      letter.classList.remove("hidden-letter");
+      letter.classList.add("visible-letter");
+    }
+  </script>
+</body>
+</html>
